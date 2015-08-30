@@ -228,7 +228,14 @@ namespace Cha
 
         private void saleOrderEntryQuotationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSaleOrderEntryQuotationFactory frm = new frmSaleOrderEntryQuotationFactory();
+            frmSaleOrderEntryFactory frm = new frmSaleOrderEntryFactory();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void deliveryOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDeliveryOrderFactory frm = new FrmDeliveryOrderFactory();
             frm.MdiParent = this;
             frm.Show();
         }

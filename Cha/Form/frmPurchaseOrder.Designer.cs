@@ -41,15 +41,6 @@
             this.btnExitSave = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.grd = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.optSingleItemGroup = new System.Windows.Forms.RadioButton();
             this.optMultiItemGroup = new System.Windows.Forms.RadioButton();
@@ -84,6 +75,24 @@
             this.lblQty = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPurchaseOrder = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,7 +108,6 @@
             this.btnAddNew.TabIndex = 49;
             this.btnAddNew.Text = "Add New";
             this.btnAddNew.UseVisualStyleBackColor = true;
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // txtSuggestionOfCash
             // 
@@ -130,7 +138,6 @@
             this.lblNote1.Size = new System.Drawing.Size(60, 20);
             this.lblNote1.TabIndex = 45;
             this.lblNote1.Text = "Note    ";
-            this.lblNote1.Click += new System.EventHandler(this.lblNote1_Click);
             // 
             // lblDateDemand
             // 
@@ -143,7 +150,6 @@
             this.lblDateDemand.Size = new System.Drawing.Size(43, 18);
             this.lblDateDemand.TabIndex = 44;
             this.lblDateDemand.Text = "Date";
-            this.lblDateDemand.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // optOfficePrint
             // 
@@ -156,7 +162,6 @@
             this.optOfficePrint.TabIndex = 42;
             this.optOfficePrint.Text = "Office Print";
             this.optOfficePrint.UseVisualStyleBackColor = true;
-            this.optOfficePrint.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
             // optForPurchsePrint
             // 
@@ -171,7 +176,6 @@
             this.optForPurchsePrint.TabStop = true;
             this.optForPurchsePrint.Text = "For Purchase Print";
             this.optForPurchsePrint.UseVisualStyleBackColor = true;
-            this.optForPurchsePrint.CheckedChanged += new System.EventHandler(this.optForPurchsePrint_CheckedChanged);
             // 
             // optApprovedVerified
             // 
@@ -198,7 +202,6 @@
             this.optInProgress.TabStop = true;
             this.optInProgress.Text = "In Progress";
             this.optInProgress.UseVisualStyleBackColor = true;
-            this.optInProgress.CheckedChanged += new System.EventHandler(this.optInProgress_CheckedChanged);
             // 
             // btnPrinting
             // 
@@ -221,7 +224,6 @@
             this.btnExitSave.TabIndex = 39;
             this.btnExitSave.Text = "Exit + Save";
             this.btnExitSave.UseVisualStyleBackColor = true;
-            this.btnExitSave.Click += new System.EventHandler(this.btnExitSave_Click);
             // 
             // dateTimePicker1
             // 
@@ -231,7 +233,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(145, 22);
             this.dateTimePicker1.TabIndex = 36;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // grd
             // 
@@ -251,51 +252,6 @@
             this.grd.Name = "grd";
             this.grd.Size = new System.Drawing.Size(922, 282);
             this.grd.TabIndex = 35;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Code";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Item Code";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Name";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Description";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Size";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Color";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "UOM";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Qty";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Stock Available";
-            this.Column9.Name = "Column9";
             // 
             // groupBox1
             // 
@@ -343,7 +299,6 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(380, 22);
             this.txtNote.TabIndex = 33;
-            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // cboItemGroup
             // 
@@ -355,7 +310,6 @@
             this.cboItemGroup.Name = "cboItemGroup";
             this.cboItemGroup.Size = new System.Drawing.Size(380, 24);
             this.cboItemGroup.TabIndex = 31;
-            this.cboItemGroup.SelectedIndexChanged += new System.EventHandler(this.cboItemGroup_SelectedIndexChanged);
             // 
             // cboEmpCode
             // 
@@ -366,7 +320,6 @@
             this.cboEmpCode.Name = "cboEmpCode";
             this.cboEmpCode.Size = new System.Drawing.Size(282, 24);
             this.cboEmpCode.TabIndex = 30;
-            this.cboEmpCode.SelectedIndexChanged += new System.EventHandler(this.cboEmpCode_SelectedIndexChanged);
             // 
             // lblNote
             // 
@@ -379,7 +332,6 @@
             this.lblNote.Size = new System.Drawing.Size(91, 18);
             this.lblNote.TabIndex = 25;
             this.lblNote.Text = "Note            ";
-            this.lblNote.Click += new System.EventHandler(this.lblNote_Click);
             // 
             // lblItemGroup
             // 
@@ -392,7 +344,6 @@
             this.lblItemGroup.Size = new System.Drawing.Size(129, 18);
             this.lblItemGroup.TabIndex = 27;
             this.lblItemGroup.Text = "Item Group           ";
-            this.lblItemGroup.Click += new System.EventHandler(this.lblItemGroup_Click);
             // 
             // lblEmpCode
             // 
@@ -405,7 +356,6 @@
             this.lblEmpCode.Size = new System.Drawing.Size(138, 18);
             this.lblEmpCode.TabIndex = 24;
             this.lblEmpCode.Text = "Emp Code              ";
-            this.lblEmpCode.Click += new System.EventHandler(this.lblEmpCode_Click);
             // 
             // lblDemandNote
             // 
@@ -418,7 +368,6 @@
             this.lblDemandNote.Size = new System.Drawing.Size(141, 18);
             this.lblDemandNote.TabIndex = 23;
             this.lblDemandNote.Text = "   Demand Note #   ";
-            this.lblDemandNote.Click += new System.EventHandler(this.lblDepartment_Click);
             // 
             // lblPurchaseOrder
             // 
@@ -431,7 +380,6 @@
             this.lblPurchaseOrder.Size = new System.Drawing.Size(142, 18);
             this.lblPurchaseOrder.TabIndex = 22;
             this.lblPurchaseOrder.Text = " Purchase Order #  ";
-            this.lblPurchaseOrder.Click += new System.EventHandler(this.lblDemandNote1_Click);
             // 
             // lblVendorCode
             // 
@@ -444,7 +392,6 @@
             this.lblVendorCode.Size = new System.Drawing.Size(141, 18);
             this.lblVendorCode.TabIndex = 51;
             this.lblVendorCode.Text = "Vendor Code          ";
-            this.lblVendorCode.Click += new System.EventHandler(this.lblVendorCode_Click);
             // 
             // lblPurchaserOrder
             // 
@@ -457,7 +404,6 @@
             this.lblPurchaserOrder.Size = new System.Drawing.Size(143, 18);
             this.lblPurchaserOrder.TabIndex = 51;
             this.lblPurchaserOrder.Text = "Purchaser Order     ";
-            this.lblPurchaserOrder.Click += new System.EventHandler(this.lblPurchaserOrder_Click);
             // 
             // mskVendorCode
             // 
@@ -468,7 +414,6 @@
             this.mskVendorCode.Name = "mskVendorCode";
             this.mskVendorCode.Size = new System.Drawing.Size(236, 22);
             this.mskVendorCode.TabIndex = 52;
-            this.mskVendorCode.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // mskPurchaserCode
             // 
@@ -479,7 +424,6 @@
             this.mskPurchaserCode.Name = "mskPurchaserCode";
             this.mskPurchaserCode.Size = new System.Drawing.Size(236, 22);
             this.mskPurchaserCode.TabIndex = 52;
-            this.mskPurchaserCode.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             // 
             // lblNameVendor1
             // 
@@ -492,7 +436,6 @@
             this.lblNameVendor1.Size = new System.Drawing.Size(51, 18);
             this.lblNameVendor1.TabIndex = 53;
             this.lblNameVendor1.Text = "Name";
-            this.lblNameVendor1.Click += new System.EventHandler(this.lblNameVendor_Click);
             // 
             // lblNamePurchaser1
             // 
@@ -505,7 +448,6 @@
             this.lblNamePurchaser1.Size = new System.Drawing.Size(51, 18);
             this.lblNamePurchaser1.TabIndex = 53;
             this.lblNamePurchaser1.Text = "Name";
-            this.lblNamePurchaser1.Click += new System.EventHandler(this.lblNamePurchaser_Click);
             // 
             // txtDemandNote
             // 
@@ -515,7 +457,7 @@
             this.txtDemandNote.Name = "txtDemandNote";
             this.txtDemandNote.Size = new System.Drawing.Size(194, 22);
             this.txtDemandNote.TabIndex = 55;
-            this.txtDemandNote.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtDemandNote.DoubleClick += new System.EventHandler(this.txtDemandNote_DoubleClick_1);
             // 
             // lblDateDepartment
             // 
@@ -528,7 +470,6 @@
             this.lblDateDepartment.Size = new System.Drawing.Size(43, 18);
             this.lblDateDepartment.TabIndex = 44;
             this.lblDateDepartment.Text = "Date";
-            this.lblDateDepartment.Click += new System.EventHandler(this.label1_Click);
             // 
             // dateTimePicker2
             // 
@@ -538,7 +479,6 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(145, 22);
             this.dateTimePicker2.TabIndex = 56;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // btnDateDemand
             // 
@@ -569,7 +509,6 @@
             this.btnF1HelpAddNew.TabIndex = 57;
             this.btnF1HelpAddNew.Text = "F1=Help";
             this.btnF1HelpAddNew.UseVisualStyleBackColor = true;
-            this.btnF1HelpAddNew.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnF1HelpItemGroup
             // 
@@ -605,7 +544,6 @@
             this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 45;
             this.label1.Text = " Suggestion of Cash  ";
-            this.label1.Click += new System.EventHandler(this.lblNote1_Click);
             // 
             // lblQty1
             // 
@@ -631,7 +569,6 @@
             this.lblNameVendor.Size = new System.Drawing.Size(335, 20);
             this.lblNameVendor.TabIndex = 28;
             this.lblNameVendor.Text = "                                                                 ";
-            this.lblNameVendor.Click += new System.EventHandler(this.lblDemandNote_Click);
             // 
             // lblNamePurchaser
             // 
@@ -645,7 +582,6 @@
             this.lblNamePurchaser.Size = new System.Drawing.Size(335, 20);
             this.lblNamePurchaser.TabIndex = 28;
             this.lblNamePurchaser.Text = "                                                                 ";
-            this.lblNamePurchaser.Click += new System.EventHandler(this.lblDemandNote_Click);
             // 
             // lblValue
             // 
@@ -670,7 +606,6 @@
             this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 28;
             this.label4.Text = "                   ";
-            this.label4.Click += new System.EventHandler(this.lblDemandNote_Click);
             // 
             // lblQty
             // 
@@ -684,7 +619,6 @@
             this.lblQty.Size = new System.Drawing.Size(105, 20);
             this.lblQty.TabIndex = 28;
             this.lblQty.Text = "                   ";
-            this.lblQty.Click += new System.EventHandler(this.lblDemandNote_Click);
             // 
             // groupBox2
             // 
@@ -705,8 +639,98 @@
             this.txtPurchaseOrder.Name = "txtPurchaseOrder";
             this.txtPurchaseOrder.Size = new System.Drawing.Size(194, 22);
             this.txtPurchaseOrder.TabIndex = 62;
-            this.txtPurchaseOrder.TextChanged += new System.EventHandler(this.txtDemandNote_TextChanged);
-            this.txtPurchaseOrder.DoubleClick += new System.EventHandler(this.txtDemandNote_DoubleClick);
+            this.txtPurchaseOrder.DoubleClick += new System.EventHandler(this.txtPurchaseOrder_DoubleClick);
+            this.txtPurchaseOrder.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPurchaseOrder_KeyDown);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Item Code";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Size";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Color";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "UOM";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Qty";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Stock Available";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Code";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Item Code";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Name";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Description";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Size";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Color";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "UOM";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Qty";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Stock Available";
+            this.Column9.Name = "Column9";
             // 
             // frmPurchaseOrder
             // 
@@ -832,5 +856,14 @@
         private System.Windows.Forms.Label lblQty;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtPurchaseOrder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }

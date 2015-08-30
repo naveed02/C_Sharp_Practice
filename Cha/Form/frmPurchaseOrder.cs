@@ -42,151 +42,6 @@ namespace Cha
             fcboDefaultValue = Convert.ToInt16(cboItemGroup.SelectedValue);
         }
 
-        private void lblDemandNote1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDemandNote_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDepartment_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmpCode_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboEmpCode_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblVendorCode_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void lblPurchaserOrder_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void lblItemGroup_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNote_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNote_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboItemGroup_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNamePurchaser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNamVendore_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNamePurchaser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNameVendor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddNew_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void optInProgress_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExitSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNote1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void optForPurchsePrint_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEscExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -199,16 +54,6 @@ namespace Cha
             {
                 this.Close();
             }
-        }
-
-        private void txtDemandNote_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDemandNote_DoubleClick(object sender, EventArgs e)
-        {
-            LookUp_Voc();
         }
 
         #region LookUp_Voc
@@ -261,6 +106,79 @@ namespace Cha
         private void PassDataVocID(object sender)
         {
             txtPurchaseOrder.Text = ((TextBox)sender).Text;
+        }
+
+        private void txtDemandNote_DoubleClick_1(object sender, EventArgs e)
+        {
+            LookUp_VocPur();
+        }
+
+        #region LookUp_VocPur
+
+        private void LookUp_VocPur()
+        {
+            frmLookUp sForm = new frmLookUp(
+
+//select m.DNId, m.Date, i.cgdDesc AS ItemGroupName, d.department_name, 
+//e.first_name + ' ' + e.last_name AS EmpName, m.Note
+//from DN m
+//INNER JOIN CatDtl i ON m.ItemGroupId = i.cgdCode AND i.cgCode = 6
+//INNER JOIN PR_Department d ON m.DepartmentId = d.departmentid
+//INNER JOIN PR_Employee e ON m.EmployeeId = e.employeeid
+
+                    "d.DNId", //select
+                    "d.Date, i.cgdDesc AS ItemGroupName, dept.department_name,e.first_name + ' ' + e.last_name AS EmpName, d.Note", //select
+                    "  DN d INNER JOIN CatDtl i ON d.ItemGroupId = i.cgdCode AND i.cgCode = 6 INNER JOIN PR_Department dept ON d.DepartmentId = dept.departmentid INNER JOIN PR_Employee e ON d.EmployeeId = e.employeeid", //from and join
+                    this.Text.ToString(),
+                    1,
+                    "DN #,DN Date,Item Group,Department,Employee Name,Note", // displayed columns names
+                    "10,8,12,12,12,15", // column width
+                    " T, T, T, T, T, T", //Column type
+                    true,
+                    "",
+                    "",
+                    "TextBox" //text box is the type of gate inword
+                    );
+
+            txtDemandNote.Text = string.Empty;
+            sForm.lupassControl = new frmLookUp.LUPassControl(PassDataVocIDPurc);
+            sForm.ShowDialog();
+
+            if (txtDemandNote.Text != null)
+            {
+                if (txtDemandNote.Text != null)
+                {
+                    if (txtDemandNote.Text.ToString() == "" || txtDemandNote.Text.ToString() == string.Empty)
+                    {
+                        return;
+                    }
+                    if (txtDemandNote.Text.ToString().Trim().Length > 0)
+                    {
+                        // PopulateRecords();
+                    }
+
+                }
+
+            }
+        }
+        #endregion
+
+        private void PassDataVocIDPurc(object sender)
+        {
+            txtDemandNote.Text = ((TextBox)sender).Text;
+        }
+
+        private void txtPurchaseOrder_DoubleClick(object sender, EventArgs e)
+        {
+            LookUp_Voc();
+        }
+
+        private void txtPurchaseOrder_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1) 
+            {
+                LookUp_VocPur();
+            }
         }
     }
 }

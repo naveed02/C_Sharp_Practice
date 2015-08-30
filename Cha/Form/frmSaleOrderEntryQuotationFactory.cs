@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Cha
 {
-    public partial class frmSaleOrderEntryQuotationFactory : Form
+    public partial class frmSaleOrderEntryFactory : Form
     {
-        public frmSaleOrderEntryQuotationFactory()
+        public frmSaleOrderEntryFactory()
         {
             InitializeComponent();
         }
@@ -29,14 +29,16 @@ namespace Cha
         private void btnEscExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void frmSaleOrderEntryQuotationFactory_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-            {
+            if(e.KeyCode == Keys.Escape)
+            { 
                 this.Close();
             }
+
         }
 
         
